@@ -1,0 +1,388 @@
+/* Estilos Gerais e Variáveis */
+:root {
+    --color-blue: #007bff;
+    --color-green: #28a745;
+    --color-yellow: #ffc107;
+    --color-orange: #ff9800;
+    --color-light-green: #e8f5e9;
+    --color-medium-green: #c8e6c9;
+    --color-dark-green: #a5d6a7;
+    --color-light-purple: #f3e5f5;
+    --color-medium-purple: #e1bee7;
+    --color-dark-purple: #ce93d8;
+    --font-family: 'Roboto', sans-serif;
+    --text-dark: #333;
+    --text-light: #555;
+    --bg-light: #f4f4f9;
+    --bg-white: #fff;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+}
+
+main {
+    padding: 25px 40px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+/* Header Comum */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.logo .logo-arc {
+    color: #888;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+nav a {
+    margin-left: 25px;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #0056b3;
+}
+
+/* Layout de Grid Principal */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+@media (max-width: 1200px) {
+    .grid-col-span-2 {
+        grid-column: span 1;
+    }
+}
+
+/* Cards Genéricos */
+.card {
+    background-color: var(--bg-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Cards Específicos do Dashboard */
+.card-metric {
+    color: white;
+    text-align: center;
+}
+.card-metric p {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+.card-metric h2 {
+    font-size: 52px;
+    margin: 0 0 10px 0;
+}
+.card-metric span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.card.blue { background-color: var(--color-blue); }
+.card.green { background-color: var(--color-green); }
+.card.yellow { background-color: var(--color-yellow); color: var(--text-dark); }
+.card.orange { background-color: var(--color-orange); color: white; }
+.card.light-green { background-color: var(--color-light-green); }
+.card.light-purple { background-color: var(--color-light-purple); }
+
+
+/* Componentes do Dashboard */
+.weekly-report .report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.weekly-report .report-header span { font-size: 12px; }
+.weekly-report ul { list-style: none; padding: 0; margin: 0; }
+.weekly-report li { display: flex; align-items: center; margin-bottom: 8px; }
+.dot { height: 12px; width: 12px; border-radius: 50%; margin-right: 10px; flex-shrink: 0; }
+.dot.yellow { background-color: #ffeb3b; }
+.dot.blue-report { background-color: #007bff; }
+.dot.green-report { background-color: #28a745; }
+
+.subject-item {
+    display: block; /* <-- ADICIONE ESTA LINHA PARA CORRIGIR O LAYOUT */
+    background-color: var(--color-medium-green);
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none; /* <-- Bônus: remove o sublinhado do link */
+    color: var(--text-dark); /* <-- Bônus: garante que o texto do link seja escuro */
+}
+.subject-item:hover {
+    background-color: var(--color-dark-green);
+}
+
+.see-more {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.placeholder-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    font-size: 20px;
+    color: #888;
+    border: 1px dashed #ccc;
+}
+
+/* Estilos para Páginas de Frequências e Notas */
+.page-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.data-table h3 {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.table-container thead {
+    color: var(--text-light);
+}
+
+.table-container tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.table-container tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.table-container .subject-name {
+    background-color: var(--color-medium-green); /* Cor para nome da disciplina */
+    border-radius: 4px;
+}
+.card.light-purple .subject-name {
+    background-color: var(--color-medium-purple);
+}
+
+.table-container .data-cell {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.table-container tr.active {
+    background-color: #e2e6ea;
+}
+.table-container tr.active .subject-name {
+    background-color: var(--color-dark-green) !important;
+}
+.card.light-purple .table-container tr.active .subject-name {
+    background-color: var(--color-dark-purple) !important;
+}
+
+.details-panel .card-metric h2 {
+    font-size: 80px;
+}
+
+.absences-list {
+    margin-top: 20px;
+}
+
+.absences-list .list-header {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 0 10px;
+}
+
+.absences-list .list-header .date { flex: 1; }
+.absences-list .list-header .topic { flex: 2; }
+
+.absence-item {
+    display: flex;
+    margin-bottom: 8px;
+}
+.absence-item span {
+    padding: 10px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+.absence-item .date {
+    flex: 1;
+    margin-right: 8px;
+}
+.absence-item .topic {
+    flex: 2;
+}
+
+/* Página de Configurações */
+.config-list .subject-item {
+    cursor: default;
+}
+.config-list .subject-item:hover {
+    background-color: var(--color-medium-green);
+}
+/* teste começou daqui
+/* Adicione este código no final do arquivo css/style.css */
+
+.quick-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 25px; /* Adiciona um espaço antes do grid principal */
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--color-blue);
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #0056b3; /* Um tom de azul mais escuro */
+    transform: translateY(-2px); /* Efeito de "levantar" o botão */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* ========================================= */
+/* ESTILOS PÁGINA DETALHE DA DISCIPLINA      */
+/* ========================================= */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.metric-cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.metric-card {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+}
+
+.metric-card p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.metric-card h2 {
+    margin: 0;
+    font-size: 36px;
+    color: var(--text-dark);
+}
+
+footer {
+    background-color: var(--bg-white);  /* Mudança: fundo branco como o cabeçalho */
+    color: var(--text-dark);            /* Mudança: texto escuro padrão */
+    text-align: center;
+    padding: 30px 40px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color); /* Adicionado: borda superior para separar do conteúdo */
+}
+
+.footer-content p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: var(--text-light); /* Usando uma cor de texto mais suave para o parágrafo */
+}
+
+.footer-links a {
+    color: var(--color-blue);           /* Mudança: links com a cor azul principal do site */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    transition: text-decoration 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;         /* Mudança: efeito de sublinhar ao passar o mouse */
+}
+
+        /* Ajuste para o CABEÇALHO em telas menores */
+@media (max-width: 992px) {
+        header {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center;    /* Centraliza os itens */
+        gap: 15px;              /* Adiciona um espaço entre os itens empilhados */
+}
+
+    nav a {
+        margin: 0 10px; /* Remove a margem apenas da esquerda e centraliza o espaçamento */
+    }
+
+    .search-bar {
+            width: 90%;         /* Faz a barra de busca ocupar mais espaço */
+            max-width: 400px;   /* Define um limite para não ficar grande demais */
+    }
+}
+
