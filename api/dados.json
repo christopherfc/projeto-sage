@@ -1,0 +1,98 @@
+{
+  "usuario": {
+    "nome": "Zeus"
+  },
+  "metricasGerais": {
+    "mediaFrequencia": 91.04,
+    "mediaGeral": 8.5
+  },
+  "relatorioSemanal": [
+    { "atividade": "Visita técnica - Pindorama", "status": "yellow" },
+    { "atividade": "Exercício prático - Modelagem de processos", "status": "yellow" },
+    { "atividade": "Relatório de ACE 4", "status": "blue-report" },
+    { "atividade": "Estudar Artigos sobre o uso de IA no BPMN", "status": "green-report" },
+    { "atividade": "Atividade de Engenharia 1", "status": "green-report" }
+  ],
+  "avisoImportante": {
+    "mensagem": "Você ainda não enviou a atividade de Programação 2. Faltam 1 dia para encerrar envios."
+  },
+  "disciplinas": [
+    {
+      "id": 1,
+      "nome": "ACE 4 - Projeto Exc (Projeto de Extensão Curricularizada)",
+      "nomeCurto": "ACE 4",
+      "notas": { "ab1": 7.5, "ab2": 8.1 },
+      "frequencia": {
+        "totalAulas": 93,
+        "aulasMinistradas": 67,
+        "faltas": [
+          { "data": "30/09/2025", "assunto": "Análise de Requisitos" }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "nome": "Arquitetura e Organização de Computadores",
+      "nomeCurto": "Arquitetura",
+      "notas": { "ab1": 7.5, "ab2": 8.1 },
+      "frequencia": {
+        "totalAulas": 76,
+        "aulasMinistradas": 56,
+        "faltas": [
+          { "data": "15/08/2025", "assunto": "Sistemas de Numeração" },
+          { "data": "29/08/2025", "assunto": "Portas Lógicas" }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "nome": "Engenharia de Software 1",
+      "nomeCurto": "Eng. Software 1",
+      "notas": { "ab1": 7.5, "ab2": 8.1 },
+      "frequencia": {
+        "totalAulas": 72,
+        "aulasMinistradas": 52,
+        "faltas": []
+      }
+    },
+    {
+      "id": 4,
+      "nome": "Gestão da Inovação Tecnológica",
+      "nomeCurto": "Inovação",
+      "notas": { "ab1": 7.5, "ab2": 8.1 },
+      "frequencia": {
+        "totalAulas": 72,
+        "aulasMinistradas": 48,
+        "faltas": [
+            { "data": "10/10/2025", "assunto": "Modelos de Negócio" }
+        ]
+      }
+    },
+    {
+        "id": 5,
+        "nome": "Gestão de Processos de Negócios",
+        "nomeCurto": "Processos",
+        "notas": { "ab1": 7.5, "ab2": 8.1 },
+        "frequencia": {
+            "totalAulas": 76,
+            "aulasMinistradas": 56,
+            "faltas": []
+        }
+    },
+    {
+      "id": 6,
+      "nome": "Programação 3",
+      "nomeCurto": "Programação 3",
+      "notas": { "ab1": 8.1, "ab2": 8.1 },
+      "frequencia": {
+        "totalAulas": 76,
+        "aulasMinistradas": 56,
+        "faltas": [
+           { "data": "07/08/2025", "assunto": "Conceitos de Herança" },
+           { "data": "14/08/2025", "assunto": "Polimorfismo" },
+           { "data": "21/08/2025", "assunto": "Classes abstratas" }
+        ]
+      }
+    }
+  ]
+}
